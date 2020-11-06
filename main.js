@@ -23,7 +23,7 @@ const m21 =  '<img src="img/Animal 12.jpg" alt="" ';
 const m22 =  '<img src="img/Animal 13.jpg" alt="" ';
 const m23 =  '<img src="img/Animal 14.jpg" alt="" ';
 const m24 =  '<img src="img/Animal 15.jpg" alt="" ';
-const m25 = '<img src="img/coin.jpg" alt="" class="coinsImg">';
+const m25 = '<img src="img/coin.png" alt="" class="coinsImg">';
 
 // Sounds Object
 const funke = document.getElementById("funke");
