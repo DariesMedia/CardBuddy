@@ -1,0 +1,209 @@
+* {
+  margin:0px;
+  padding: 0px;
+}
+
+html, body {
+  height: 100vh;
+  min-height: auto;
+  max-height: auto;
+  width: 100vw;
+  min-width: auto;
+  max-width: auto;
+  font-size: 2.5vh;
+  line-height: 4.5vh;
+  background-color: white;
+  color:white;
+}
+
+header {
+ height: 9vh;
+ width: 100vw;
+}
+
+main {
+  height: 91vh;
+  width: 100vw;
+}
+
+.indexBody {
+  background-color: white;
+  color: black;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width:100%;
+  height:100%;
+}
+
+ul {
+  list-style: none; 
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.homepage {
+  background-color: #0D156F;
+  font-style: bolder;
+}
+
+li:first-child{
+  margin-right:auto;
+}
+
+li {
+  padding: 3vh;
+}
+
+.level {
+  background-color: #0D156F;
+}
+
+.counter {
+  background-color: orangered;
+}
+
+.coins {
+  background-color: #0D156F;
+}
+
+.goal {
+  background: orangered;
+}
+
+.coinsImg {
+ width: 2vh;
+}
+
+.display {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.display .intro {
+  height: 50vh;
+  background-color:red;
+}
+
+.display h3 {
+  color: #0D156F;
+}
+
+.display a button {
+  background-color: red;
+  padding:2vh;
+  color: white;
+  font-size: bolder;
+  border:0.5vh solid;
+  border-color: #0D156F;
+  border-radius:3vh 0px;
+}
+
+.display a button:focus {
+  outline: none;
+}
+
+#gameBox {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+}
+
+#gamePlay {
+  padding-top: 10vh;
+  width: 80vw;
+  height: 40vh;
+  font-size: 2.5vh;
+  color: #060C4E;
+}
+
+.dashboard {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  text-align: center;
+  padding-top: 20vh;
+}
+
+.dashboard div {
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+  padding-left: 10vh;
+  padding-right: 10vh;
+}
+
+.g-board {
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+  grid-row-gap: 1vh;
+  grid-column-gap: 1vh;
+  text-align: center;
+  justify-content: space-evenly;
+  padding-top: 5vh;
+  padding-left: auto;
+  padding-right: auto;
+}
+  
+.g-board div {
+  background: grey;
+  width: auto;
+  height: 13vh;
+}
+
+#yes {
+  background-color: green;
+  color: white;
+  font-size: bolder;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+  padding-left: 10vh;
+  padding-right: 10vh;
+}
+
+#try {
+  padding-bottom: 10px;
+}
+
+#yes:focus {
+  outline: none;
+}
+
+#no {
+  background-color: red;
+  color: white;
+  font-size: bolder;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+  padding-left: 10vh;
+  padding-right: 10vh;
+}
+
+#no:focus {
+  outline: none;
+}
+
+@media (max-width: 991.98px) {
+
+  
+  #shuffle {
+    background-color: orangered;
+    display: none;
+  }
+  
+  #play {
+    background-color: orangered;
+  }
+  
+  #help {
+    background-color: darkgreen;
+  }
+}
