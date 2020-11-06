@@ -197,6 +197,7 @@ const gEnd = () => {
   shuffleButton.style.display = "none";
   tryAgain();
   ayele.play();
+  keepQuiet.play();
   instrumental.pause();
   instrumental.currentTime = 0;
 }
