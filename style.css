@@ -5,15 +5,12 @@
 
 html, body {
   height: 100vh;
-  min-height: auto;
-  max-height: auto;
   width: 100vw;
-  min-width: auto;
-  max-width: auto;
   font-size: 2.5vh;
   line-height: 4.5vh;
-  background-color: white;
+  background-color: rgb(44, 2, 53);
   color:white;
+  overflow: hidden;
 }
 
 header {
@@ -27,8 +24,7 @@ main {
 }
 
 .indexBody {
-  background-color: white;
-  color: black;
+  color: white;
 }
 
 a {
@@ -49,7 +45,7 @@ ul {
 }
 
 .homepage {
-  background-color: #0D156F;
+  background-color: orangered;
   font-style: bolder;
 }
 
@@ -59,22 +55,27 @@ li:first-child{
 
 li {
   padding: 3vh;
+  margin-left: 1vh;
 }
 
 .level {
-  background-color: #0D156F;
+  background-color: rgb(4, 102, 73);
+  border-radius: 2vh 0px;
 }
 
 .counter {
   background-color: orangered;
+  border-radius: 2vh 0px;
 }
 
 .coins {
-  background-color: #0D156F;
+  background-color: rgb(170, 170, 8);
+  border-radius: 2vh 0px;
 }
 
 .goal {
-  background: orangered;
+  background: rgb(116, 2, 110);
+  border-radius: 2vh 0px;
 }
 
 .coinsImg {
@@ -90,20 +91,19 @@ li {
 
 .display .intro {
   height: 50vh;
-  background-color:red;
 }
 
 .display h3 {
-  color: #0D156F;
+ color:yellow;
 }
 
 .display a button {
-  background-color: red;
+  background-color: darkgreen;
   padding:2vh;
   color: white;
   font-size: bolder;
   border:0.5vh solid;
-  border-color: #0D156F;
+  border-color: yellow;
   border-radius:3vh 0px;
 }
 
@@ -123,7 +123,11 @@ li {
   width: 80vw;
   height: 40vh;
   font-size: 2.5vh;
-  color: #060C4E;
+  color: yellow;
+}
+
+#gamePlay img {
+  border: 0.5vh solid orange;
 }
 
 .dashboard {
@@ -135,17 +139,18 @@ li {
 }
 
 .dashboard div {
-  padding-top: 2vh;
-  padding-bottom: 2vh;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
   padding-left: 10vh;
   padding-right: 10vh;
+  border: 0.5vh solid yellow;
 }
 
 .g-board {
   display: grid;
-  grid-template-columns: 30% 30% 30%;
-  grid-row-gap: 1vh;
-  grid-column-gap: 1vh;
+  grid-template-columns: 27% 27% 27%;
+  grid-row-gap: 2vh;
+  grid-column-gap: 2vh;
   text-align: center;
   justify-content: space-evenly;
   padding-top: 5vh;
@@ -156,7 +161,21 @@ li {
 .g-board div {
   background: grey;
   width: auto;
-  height: 13vh;
+  height: 11vh;
+  border: 0.5vh solid orange;
+}
+
+#shuffle {
+  background-color: orangered;
+  display: none;
+}
+
+#play {
+  background-color: orangered;
+}
+
+#help {
+  background-color: darkgreen;
 }
 
 #yes {
@@ -193,17 +212,4 @@ li {
 
 @media (max-width: 991.98px) {
 
-  
-  #shuffle {
-    background-color: orangered;
-    display: none;
-  }
-  
-  #play {
-    background-color: orangered;
-  }
-  
-  #help {
-    background-color: darkgreen;
-  }
 }
