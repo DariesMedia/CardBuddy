@@ -70,10 +70,6 @@ var userCoins = 0;
 var level = 0;
 var reshuffleMe = 0;
 
-// Game Task Menu
-gamePlay.innerHTML = "<h2> Find this image and collect 10 coins </h2> <br/>" + imgList[12] + "/>";
-goal.innerText = "G-" + systemPoints;
-
 // Game Function
 const gShuffle = () => { 
   // Photos List
@@ -126,6 +122,10 @@ const gEngine = () => {
     }
   }, 1000);
 }
+
+// Game Task Menu
+gamePlay.innerHTML = "<h2> Find this image and collect 10 coins </h2> <br/>" + imgList[12] + "/>";
+goal.innerText = "G-" + systemPoints;
     
 // Function to Empty Board and Start Game
 const shuffle = () => {
