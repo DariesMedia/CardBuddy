@@ -47,6 +47,7 @@ const shuffleList = (array) => {
   array.sort(() => Math.random() - 0.5);
 };
 
+// Shuffling List
 shuffleList(imgList);
 
 // Game Board Object
@@ -61,36 +62,37 @@ const glevel = document.getElementById("level");
 const playButton = document.getElementById("play");
 const goal = document.getElementById("goal");
 const help = document.getElementById("help");
+const dashboard = document.getElementById("dashboard");
 
+// Game Object Variables
 const gameCounter = 30;
 var userCoins = 0;
 var level = 0;
 var reshuffleMe = 0;
 
+// Game Task Menu
+gamePlay.innerHTML = "<h2> Find this image and collect 10 coins </h2> <br/>" + imgList[12] + "/>";
+goal.innerText = "G-" + systemPoints;
+
 // Game Function
-const gShuffle = () => {
- 
+const gShuffle = () => { 
   // Photos List
   const photos = [];
-  
-  // Selecting the first 9 Images From imgList
+  // Selecting the first 11 Images From imgList
   imgList.forEach (function(item){
     if (photos.length < 11) {
       photos.push(item);
     }
   });
-  
-  // Picking Only One Image as Answer from imgList and Adding it 3 times to newImgList
+  // Picking Only One Image as Answer from imgList and Adding it 4 times to photos List
   while (photos.length < 15) {
     photos.push(imgList[12] + ' id ="ant" Onclick="antClick(this)" ');
   }
- 
-  // Re-arranged Photos For Game Start
+  // Re-arranging Photos For Game Start
   shuffleList(photos);
   shuffleList(photos);
   shuffleList(photos);
   shuffleList(photos);
-  
   // Adding Game Photo to Game Board
   photos.forEach(function(photo) {
     const gPhoto = photo + 'id="wrong" onClick="wrongAnt()" ' + ' />';
@@ -106,15 +108,12 @@ const gEngine = () => {
   setInterval(function(){
     gTym -= 1;
     gBoardCounter.innerText = gTym;
-    //if (gTym == 5 || gTym == 10 || gTym == 15 || gTym == 20 || gTym == 25) {
-    //   shuffle();
-    //}
-    if (gTym == 0){
+    if (gTym == 0){  // If Time is Over
       clearInterval(gTimer);
       confuse.play();
       gEnd();
     }
-    if (userCoins === systemPoints){
+    if (userCoins === systemPoints){ // If User Completes Goal
       clearInterval(gTimer);
       systemPoints += 5;
       level += 1;
@@ -125,26 +124,29 @@ const gEngine = () => {
       gBoardCounter.innerText = 0;
       newLevel();
     }
-  }, 100);
+  }, 1000);
 }
     
-// Function to Reshuffle images
+// Function to Empty Board and Start Game
 const shuffle = () => {
   gBoard.innerHTML = "";
   gShuffle();
 };
 
+// User Funtion to Reshuffle Game Board
 const shuffleSound = () => {
   gamePlay.style.display = "none";
   shuffle();
   punch.play();
 }
 
+// Function For Wrong Attempt
 const wrongAnt = () => {
   funke.play();
   gBoardCoins.innerHTML = '<span>' + m25 + " " + userCoins + '</span>';
 }
 
+// Function For Correct Attempt
 const antClick = (pic) => {
   pic.parentNode.remove();
   userCoins += 1;
@@ -156,12 +158,11 @@ const antClick = (pic) => {
   }
 }
 
-gamePlay.innerHTML = "<h2> Find This Image and Collect 10 Coins </h2> <br/>" + imgList[12] + "/>";
-goal.innerText = "G-" + systemPoints;
-
+// Function For Play Button
 const play = () => {
   playButton.style.display = "none";
   gamePlay.style.display = "none";
+  dashboard.style.paddingTop = "5vh";
   shuffleButton.style.display = "block";
   shuffle();
   gBoard.style.display = "grid";
@@ -169,21 +170,25 @@ const play = () => {
   instrumental.play();
 }
 
+// New Level Function When a User completes Goal
 const newLevel = () => {
   gBoard.style.display = "none";
   gamePlay.style.display = "block";
   shuffleList(imgList);
-  gamePlay.innerHTML = "<h2> Find This Image and Collect " + systemPoints + " coins </h2>" + imgList[12] + "/>";
+  gamePlay.innerHTML = "<h2> Find this image and collect " + systemPoints + " coins </h2> <br/>" + imgList[12] + "/>";
   goal.innerText = "G-" + systemPoints;
+  dashboard.style.paddingTop = "20vh";
   playButton.style.display = "block";
   shuffleButton.style.display = "none";
 }
 
+// Game over Display When a User Loses
 const tryAgain = () => {
-  gamePlay.innerHTML = "<img src='img/gameover.gif' /> <div id='try' onClick ='yes()'> <br/> <h2> Would like to play again <br/> <br/> <button id='yes'> Yes </button> <a href='index.html'><button id='no'> No </button></a> </div> <br/>";
+  gamePlay.innerHTML = "<img src='img/gameover.gif' /> <div id='try' onClick ='yes()'> <br/> <h2> Would you like to play again <br/> <br/> <a href='game.html'><button id='yes'> Yes </button></a> <a href='index.html'><button id='no'> No </button></a> </div> <br/>";
   playButton.style.display = "none";
 }
 
+// Game Over Action
 const gEnd = () => {
   gBoard.style.display = "none";
   gamePlay.style.display = "block";
@@ -194,9 +199,4 @@ const gEnd = () => {
   ayele.play();
   instrumental.pause();
   instrumental.currentTime = 0;
-}
-
-const yes = () => {
-  help.style.display = "block";
-  newLevel();
 }
