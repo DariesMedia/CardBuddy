@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Find This</title>
+  <!-- HTML -->
+  
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+  
+  <!-- Game Header -->
+  <header class="game">
+    <nav>
+      <ul class="game header">
+        <li class=""> Find This </li>
+        <li class="level" id="level"> Lv 0</li>
+        <li class="counter" id="counter"> 0 </li>
+        <li class="coins" id="coins"> <img src="img/coin.png" alt="" class="coinsImg"> </li>
+        <li id="goal" class="goal"></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <main>
+    <!--Game Board -->
+    <div id="gameBox">
+      <div class="g-board" id="g-board"></div>
+    
+      <div id="gamePlay"></div>
+    </div>
+   
+    <!-- Dashboard Interface -->
+    <div class="dashboard">
+      <div id="play" onClick= "play(this)">Start</div>
+      <div id="shuffle" onClick= "shuffleSound()">Shuffle</div>
+      <div id="help">Help</div>
+    </div>
+    
+      
+    <!-- Music Files  -->
+    <audio id="funke" src="./sounds/Funke.mp3" preload="auto"></audio>
+    
+    <audio id="punch" src="./sounds/Punch.mp3" preload="auto">
+     </audio>
+     
+    <audio id="apostle" src="./sounds/Apostle Would Hear Of This.mp3" preload="auto"></audio>
+    
+    <audio id="confuse" src="./sounds/Confuse.mp3" preload="auto"></audio>
+    
+    <audio id="continue" src="./sounds/Continue.mp3" preload="auto"></audio>
+    
+    <audio id="instrumental" src="./sounds/Instrumental.mp3" preload="auto"></audio>
+    
+    <audio id="keepQuiet" src="./sounds/Will You Keep Quiet.mp3" preload="auto"></audio>
+    
+    <audio id="ayele" src="./sounds/Ayele O.mp3" preload="auto"></audio>
+    
+    <!-- Script -->
+    <script src="main.js"></script>
+  </main>
+</body>
+</html>
