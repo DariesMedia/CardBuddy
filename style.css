@@ -58,6 +58,10 @@ li {
   margin-left: 1vh;
 }
 
+.gameHeader li {
+  font-size: 1.5vh;
+}
+
 .level {
   background-color: rgb(4, 102, 73);
   border-radius: 2vh 0px;
