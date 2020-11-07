@@ -121,7 +121,7 @@ const gEngine = () => {
     systemPoints;
     if (userCoins >= systemPoints){ // If User Completes Goal
       clearInterval(gTimer);
-      systemPoints += 2;
+      systemPoints += 4;
       levelPoint += 1;
       glevel.innerText = "Lv " + level;
       userCoins = 0;
@@ -136,6 +136,7 @@ const gEngine = () => {
       level += 1;
       glevel.innerText = "Lv " + level;
       levelPoint = 0;
+      system points = 10;
       timeUp -= 10;
       apostle.play();
     }
