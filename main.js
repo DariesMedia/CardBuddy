@@ -23,7 +23,7 @@ const m21 =  '<img src="img/Animal 12.jpg" alt="" ';
 const m22 =  '<img src="img/Animal 13.jpg" alt="" ';
 const m23 =  '<img src="img/Animal 14.jpg" alt="" ';
 const m24 =  '<img src="img/Animal 15.jpg" alt="" ';
-const m25 = '&#36';
+const m25 = '<img src="img/coin.png" alt="" class="coinsImg">';
 
 // Sounds Object
 const funke = document.getElementById("funke");
@@ -121,7 +121,7 @@ const gEngine = () => {
     systemPoints;
     if (userCoins >= systemPoints){ // If User Completes Goal
       clearInterval(gTimer);
-      systemPoints += 4;
+      systemPoints += 2;
       levelPoint += 1;
       glevel.innerText = "Lv " + level;
       userCoins = 0;
@@ -136,7 +136,6 @@ const gEngine = () => {
       level += 1;
       glevel.innerText = "Lv " + level;
       levelPoint = 0;
-      system points = 10;
       timeUp -= 10;
       apostle.play();
     }
@@ -227,6 +226,7 @@ const gEnd = () => {
   instrumental.pause();
   instrumental.currentTime = 0;
 }
+
 
 // Sound Button
 const offButton = () => {
