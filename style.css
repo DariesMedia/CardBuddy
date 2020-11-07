@@ -87,7 +87,7 @@ li {
   background: rgb(116, 2, 110);
 }
 
-span {
+.coinsImg {
  width: 2vh;
 }
 
@@ -150,10 +150,10 @@ span {
 }
 
 .dashboard div {
-  padding-top: 0.5vh;
-  padding-bottom: 0.5vh;
-  padding-left: 4vh;
-  padding-right: 4vh;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+  padding-left: 3vh;
+  padding-right: 3vh;
   border: 0.5vh solid yellow;
 }
 
