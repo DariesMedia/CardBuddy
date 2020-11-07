@@ -14,12 +14,12 @@ html, body {
 }
 
 header {
- height: 9vh;
+ height: 8vh;
  width: 100vw;
 }
 
 main {
-  height: 91vh;
+  height: 92vh;
   width: 100vw;
 }
 
@@ -54,36 +54,41 @@ li:first-child{
 }
 
 li {
-  padding: 3vh;
+  padding: 2vh;
   margin-left: 1vh;
 }
 
 .gameHeader li {
   font-size: 1.5vh;
+  font-weight: bolder;
+}
+
+.gImage {
+  width: 5vw;
+  padding: 0vh;
+  margin: 0vh;
+  width: 10vw;
 }
 
 .level {
   background-color: rgb(4, 102, 73);
-  border-radius: 2vh 0px;
 }
 
 .counter {
   background-color: orangered;
-  border-radius: 2vh 0px;
 }
 
 .coins {
-  background-color: rgb(170, 170, 8);
-  border-radius: 2vh 0px;
+  background-color: white;
+  color: black;
 }
 
 .goal {
   background: rgb(116, 2, 110);
-  border-radius: 2vh 0px;
 }
 
 .coinsImg {
- width: 1vh;
+ width: 2vh;
 }
 
 .display {
@@ -124,6 +129,8 @@ li {
 
 #gamePlay {
   padding-top: 10vh;
+  padding-left: 0vh;
+  padding-right: 6vh;
   width: 80vw;
   height: 40vh;
   font-size: 2.5vh;
@@ -178,8 +185,9 @@ li {
   background-color: orangered;
 }
 
-#help {
+#sound {
   background-color: darkgreen;
+  display: none;
 }
 
 #yes {
@@ -188,8 +196,8 @@ li {
   font-size: bolder;
   padding-top: 2vh;
   padding-bottom: 2vh;
-  padding-left: 10vh;
-  padding-right: 10vh;
+  padding-left: 8vh;
+  padding-right: 8vh;
 }
 
 #try {
@@ -206,8 +214,9 @@ li {
   font-size: bolder;
   padding-top: 2vh;
   padding-bottom: 2vh;
-  padding-left: 10vh;
-  padding-right: 10vh;
+  padding-left: 8vh;
+  padding-right: 8vh;
+  margin-left: 1vh;
 }
 
 #no:focus {
