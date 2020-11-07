@@ -38,6 +38,8 @@ const instrumental = document.getElementById("instrumental");
 instrumental.loop = true;
 const keepQuiet = document.getElementById("keepQuiet");
 const ayele = document.getElementById("ayele");
+const clapping = document.getElementById("clapping");
+const chai = document.getElementById("chai");
 
 // Game Images In a List
 const imgList = [m1,m2, m3, m5, m6, m7, m8, m9, m10, m11, m12, m13, m14, m15, m16, m17, m18, m19, m20, m21, m22, m23, m24];
@@ -61,8 +63,9 @@ const shuffleButton = document.getElementById("shuffle");
 const glevel = document.getElementById("level");
 const playButton = document.getElementById("play");
 const goal = document.getElementById("goal");
-const help = document.getElementById("help");
+const soundButton = document.getElementById("sound");
 const dashboard = document.getElementById("dashboard");
+const gImage = document.getElementById("gImage");
 
 // Game Object Variables
 const gameCounter = 30;
@@ -98,6 +101,8 @@ const gShuffle = () => {
 
 // Game Timer Function
 var systemPoints = 10;
+var levelPoint = 0;
+var timeUp = 1000;
 const gEngine = () => {
   var  gTym = gameCounter;
   var gTimer = 
@@ -109,10 +114,15 @@ const gEngine = () => {
       confuse.play();
       gEnd();
     }
-    if (userCoins === systemPoints){ // If User Completes Goal
+    if (gTym == 0 && levelPoint >= 4 ){
+      chai.play();
+    }
+    userCoins;
+    systemPoints;
+    if (userCoins >= systemPoints){ // If User Completes Goal
       clearInterval(gTimer);
-      systemPoints += 5;
-      level += 1;
+      systemPoints += 2;
+      levelPoint += 1;
       glevel.innerText = "Lv " + level;
       userCoins = 0;
       contiNue.play();
@@ -120,7 +130,16 @@ const gEngine = () => {
       gBoardCounter.innerText = 0;
       newLevel();
     }
-  }, 1000);
+    levelPoint;
+    if (levelPoint == 7) {
+      clapping.play();
+      level += 1;
+      glevel.innerText = "Lv " + level;
+      levelPoint = 0;
+      timeUp -= 10;
+      apostle.play();
+    }
+  }, timeUp);
 }
 
 // Game Task Menu
@@ -138,6 +157,7 @@ const shuffleSound = () => {
   gamePlay.style.display = "none";
   shuffle();
   punch.play();
+  sound.style.display = "block";
 }
 
 // Function For Wrong Attempt
@@ -168,31 +188,36 @@ const play = () => {
   gBoard.style.display = "grid";
   gEngine();
   instrumental.play();
+  gImage.innerHTML = imgList[12] + "/>";
+  sound.style.display = "block";
 }
 
 // New Level Function When a User completes Goal
 const newLevel = () => {
   gBoard.style.display = "none";
   gamePlay.style.display = "block";
+  gamePlay.style.paddingRight = "0vh";
   shuffleList(imgList);
   gamePlay.innerHTML = "<h2> Find this image and collect " + systemPoints + " coins </h2> <br/>" + imgList[12] + "/>";
   goal.innerText = "G-" + systemPoints;
   dashboard.style.paddingTop = "20vh";
   playButton.style.display = "block";
   shuffleButton.style.display = "none";
+  sound.style.display = "none";
 }
 
 // Game over Display When a User Loses
 const tryAgain = () => {
   gamePlay.innerHTML = "<img src='img/gameover.gif' /> <div id='try' onClick ='yes()'> <br/> <h2> Would you like to play again <br/> <br/> <a href='game.html'><button id='yes'> Yes </button></a> <a href='index.html'><button id='no'> No </button></a> </div> <br/>";
   playButton.style.display = "none";
+  gamePlay.style.paddingRight = "0vh";
 }
 
 // Game Over Action
 const gEnd = () => {
   gBoard.style.display = "none";
   gamePlay.style.display = "block";
-  help.style.display = "none";
+  sound.style.display = "none";
   playButton.style.display = "block";
   shuffleButton.style.display = "none";
   tryAgain();
@@ -200,4 +225,18 @@ const gEnd = () => {
   keepQuiet.play();
   instrumental.pause();
   instrumental.currentTime = 0;
+}
+
+// Sound Button
+const offButton = () => {
+  if (sound.innerText === "Music On") {
+    sound.innerText = "Music Off";
+    instrumental.pause();
+    instrumental.currentTime = 0;
+    sound.style.backgroundColor = "black";
+  }else {
+    instrumental.play();
+    sound.innerText = "Music On";
+    sound.style.backgroundColor = "darkgreen";
+  }
 }
