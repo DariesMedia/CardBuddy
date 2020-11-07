@@ -135,8 +135,8 @@ const gEngine = () => {
       clapping.play();
       level += 1;
       glevel.innerText = "Lv " + level;
-      var levelPoint = 0;
-      var systemPoints = 10;
+      levelPoint = 0;
+      systemPoints = 10;
       timeUp -= 10;
       apostle.play();
     }
