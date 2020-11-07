@@ -23,7 +23,7 @@ const m21 =  '<img src="img/Animal 12.jpg" alt="" ';
 const m22 =  '<img src="img/Animal 13.jpg" alt="" ';
 const m23 =  '<img src="img/Animal 14.jpg" alt="" ';
 const m24 =  '<img src="img/Animal 15.jpg" alt="" ';
-const m25 = '<img src="img/coin.png" alt="" class="coinsImg">';
+const m25 = '<span>&#36;</span>';
 
 // Sounds Object
 const funke = document.getElementById("funke");
@@ -70,7 +70,7 @@ const gImage = document.getElementById("gImage");
 // Game Object Variables
 const gameCounter = 30;
 var userCoins = 0;
-var level = 1;
+var level = 0;
 var reshuffleMe = 0;
 
 // Game Function
