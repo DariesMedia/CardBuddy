@@ -24,6 +24,7 @@
         <li class="counter" id="counter"> 0 </li>
         <li class="coins" id="coins"> <img src="img/coin.png" alt="" class="coinsImg"> </li>
         <li id="goal" class="goal"></li>
+        <li class="gImage" id="gImage"></li>
       </ul>
     </nav>
   </header>
@@ -40,7 +41,7 @@
     <div class="dashboard" id="dashboard">
       <div id="play" onClick= "play(this)">Start</div>
       <div id="shuffle" onClick= "shuffleSound()">Shuffle</div>
-      <div id="help">Help</div>
+      <div id="sound" onClick="offButton()">Music On</div>
     </div>
     
       
@@ -61,6 +62,10 @@
     <audio id="keepQuiet" src="./sounds/Will You Keep Quiet.mp3" preload="auto"></audio>
     
     <audio id="ayele" src="./sounds/Ayele O.mp3" preload="auto"></audio>
+     
+    <audio id="clapping" src="./sounds/clapping.mp3" preload="auto"></audio>
+    
+    <audio id="chai" src="./sounds/Chai.mp3" preload="auto"></audio>
     
     <!-- Script -->
     <script src="main.js"></script>
