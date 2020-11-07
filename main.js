@@ -70,7 +70,7 @@ const gImage = document.getElementById("gImage");
 // Game Object Variables
 const gameCounter = 30;
 var userCoins = 0;
-var level = 0;
+var level = 1;
 var reshuffleMe = 0;
 
 // Game Function
@@ -121,7 +121,7 @@ const gEngine = () => {
     systemPoints;
     if (userCoins >= systemPoints){ // If User Completes Goal
       clearInterval(gTimer);
-      systemPoints += 2;
+      systemPoints += 3;
       levelPoint += 1;
       glevel.innerText = "Lv " + level;
       userCoins = 0;
@@ -136,6 +136,7 @@ const gEngine = () => {
       level += 1;
       glevel.innerText = "Lv " + level;
       levelPoint = 0;
+      systemPoints = 10;
       timeUp -= 10;
       apostle.play();
     }
