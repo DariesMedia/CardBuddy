@@ -70,7 +70,7 @@ const gImage = document.getElementById("gImage");
 // Game Object Variables
 const gameCounter = 30;
 var userCoins = 0;
-var level = 0;
+var level = 1;
 var reshuffleMe = 0;
 
 // Game Function
@@ -132,11 +132,13 @@ const gEngine = () => {
     }
     levelPoint;
     if (levelPoint == 7) {
+      systemPoints = 10;
       clapping.play();
       level += 1;
       glevel.innerText = "Lv " + level;
       levelPoint = 0;
-      systemPoints = 10;
+      gamePlay.innerHTML = "<h2> Find this image and collect " + systemPoints + " coins </h2> <br/>" + imgList[12] + "/>";
+      goal.innerText = "G-" + systemPoints;
       timeUp -= 10;
       apostle.play();
     }
