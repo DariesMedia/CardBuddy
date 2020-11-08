@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Find This</title>
+  <title>CardBoard</title>
   <!-- HTML -->
   
   <!-- Custom Styles -->
@@ -19,12 +19,12 @@
   <header class="game">
     <nav>
       <ul class="gameHeader">
-        <li class=""> Find This </li>
+        <li class=""> CardBoard </li>
         <li class="level" id="level"> Lv 1</li>
         <li class="counter" id="counter"> 0 </li>
-        <li class="coins" id="coins"> <span>&#36;</span> </li>
+        <li class="score" id="score"> Score: 0</li>
         <li id="goal" class="goal"></li>
-        <li class="gImage" id="gImage"></li>
+        <li class="gImage" id="gImage">Hint:</li>
       </ul>
     </nav>
   </header>
@@ -66,6 +66,8 @@
     <audio id="clapping" src="./sounds/clapping.mp3" preload="auto"></audio>
     
     <audio id="chai" src="./sounds/Chai.mp3" preload="auto"></audio>
+    
+    <audio id="correct" src="./sounds/correct.mp3" preload="auto"></audio>
     
     <!-- Script -->
     <script src="main.js"></script>
