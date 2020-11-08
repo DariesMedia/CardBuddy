@@ -49,13 +49,9 @@ ul {
   font-style: bolder;
 }
 
-li:first-child{
-  margin-right:auto;
-}
-
 li {
   padding: 2vh;
-  margin-left: 1vh;
+  margin-left: 0vh;
 }
 
 .gameHeader li {
@@ -64,10 +60,9 @@ li {
 }
 
 .gImage {
-  width: 5vw;
-  padding: 0vh;
-  margin: 0vh;
-  width: 10vw;
+  background-color: pink;
+  color: black;
+  font-weight: bolder;
 }
 
 .level {
@@ -78,17 +73,13 @@ li {
   background-color: orangered;
 }
 
-.coins {
+.score {
   background-color: white;
   color: black;
 }
 
 .goal {
   background: rgb(116, 2, 110);
-}
-
-.coinsImg {
- width: 2vh;
 }
 
 .display {
@@ -137,6 +128,14 @@ li {
   color: yellow;
 }
 
+#gamePlay .div {
+  background-color: pink;
+  color: black;
+  font-size: 10vh;
+  padding-top: 20vh;
+  padding-bottom: 20vh;
+}
+
 #gamePlay img {
   border: 0.5vh solid orange;
 }
@@ -174,6 +173,15 @@ li {
   width: auto;
   height: 11vh;
   border: 0.5vh solid orange;
+}
+
+.g-board div > div {
+  text-align: center;
+  width: 20vw;
+  background-color: black;
+  font-weight: bolder;
+  padding-bottom: 1vh;
+  border: 1px solid pink;
 }
 
 #shuffle {
