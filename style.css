@@ -55,8 +55,12 @@ li {
 }
 
 .gameHeader li {
-  font-size: 1.5vh;
+  font-size: 1vh;
   font-weight: bolder;
+}
+
+.gameHeader li a {
+  color: white;
 }
 
 .gImage {
@@ -178,7 +182,7 @@ li {
 .g-board div > div {
   text-align: center;
   width: 20vw;
-  background-color: black;
+  background-color: #A54C00;
   font-weight: bolder;
   padding-bottom: 1vh;
   border: 1px solid pink;
@@ -231,6 +235,11 @@ li {
   outline: none;
 }
 
-@media (max-width: 991.98px) {
-
+@media (min-width: 991.98px) and (max-width: 1200px) {
+  .gameHeader li {
+    font-size: 2vh;
+  }
+  main {
+    width: 50vw;
+  }
 }
