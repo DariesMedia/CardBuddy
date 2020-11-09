@@ -176,9 +176,14 @@ const gEngine = () => {
       level += 1;
       glevel.innerText = "Lv " + level;
       levelPoint = 0;
-      gamePlay.innerHTML = "<h2> Find this image</h2> <br/>" + imgList[12] + "/>";
       goal.innerText = "G-" + systemPoints;
       apostle.play();
+      newLevel();
+      document.getElementById("congrat").style.display = "block";
+      document.getElementById("body").style.backgroundImage = "url('img/congrats.gif')";
+      document.getElementById("body").style.backgroundPosition = "center";
+      document.getElementById("body").style.backgroundSize = "cover";
+      document.getElementById("body").style.opacity = "0.6";
     }
   }, timeUp);
 }
@@ -237,6 +242,7 @@ const antClick = (pic) => {
 
 // Function For Play Button
 const play = () => {
+  document.getElementById("body").style.backgroundImage = "none";
   playButton.style.display = "none";
   gamePlay.style.display = "none";
   dashboard.style.paddingTop = "5vh";
@@ -255,6 +261,7 @@ const play = () => {
     gImage.style.padding = "2vh";
   }
   sound.style.display = "block";
+  document.getElementById("congrat").style.display = "none";
 }
 
 // New Level Function When a User completes Goal
@@ -266,13 +273,21 @@ const newLevel = () => {
   gamePick = gameList[Math.floor(Math.random() * gameList.length)];
   if (gamePick == gameList[1]) {
     shuffleList(imgList);
-    gamePlay.innerHTML = "<h2> Find this image</h2> <br/>" + imgList[12] + "/>";
+    gamePlay.innerHTML = "<h2 id='congrat'> Congrats! Level " + level + "</h2><br/>" + "<h2> Find this image</h2> <br/>" + imgList[12] + "/>";
+    gImage.innerHTML = imgList[12] + "/>";
+    gImage.style.width = "10vw";
+    gImage.style.padding = "0vh";
+    gImage.style.margin = "0vh";
+    document.getElementById("congrat").style.display = "none";
   }else {
     shuffleList(numList);
-    gamePlay.innerHTML = "<h2> Find this number</h2> <br/> <div class='div'>" + numList[14] + "</div>";
+    gamePlay.innerHTML = "<h2 id='congrat'> Congrats! Level " + level + "</h2><br/>" + "<h2> Find this number </h2> <br/> <div class='div'>" + numList[14] + "</div>";
+    gImage.innerHTML = "Hint: " + numList[14];
+    gImage.style.padding = "2vh";
+    document.getElementById("congrat").style.display = "none";
   }
   goal.innerText = "G-" + systemPoints;
-  dashboard.style.paddingTop = "20vh";
+  dashboard.style.paddingTop = "25vh";
   playButton.style.display = "block";
   shuffleButton.style.display = "none";
   sound.style.display = "none";
