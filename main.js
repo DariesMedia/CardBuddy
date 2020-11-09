@@ -141,7 +141,7 @@ const gShuffle = () => {
 var systemPoints = 10;
 var levelPoint = 0;
 var timeUp = 2000;
-var userPass = systemPoints - 1;
+var userPass = systemPoints;
 const gEngine = () => {
   var  gTym = gameCounter;
   var gTimer = 
@@ -161,6 +161,7 @@ const gEngine = () => {
     if (userCoins >= systemPoints){ // If User Completes Goal
       clearInterval(gTimer);
       systemPoints += 1;
+      userPass = systemPoints;
       levelPoint += 1;
       glevel.innerText = "Level: " + level;
       userCoins = 0;
@@ -217,6 +218,7 @@ const antClick = (pic) => {
   userCoins += 1;
   userScore += 1;
   gBoardScore.innerHTML = "Score: " + userScore;
+  userPass -= 1;
   goal.innerText = "G-" + userPass;
   reshuffleMe += 1;
   if (gamePick == gameList[1]) {
