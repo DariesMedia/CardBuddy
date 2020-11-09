@@ -101,7 +101,7 @@ const gShuffle = () => {
     });
     // Picking Only One Image as Answer from imgList and Adding it 4 times to photos List
     while (photos.length < 15) {
-      photos.push(imgList[12] + ' id ="ant" Onclick="antClick(this)" ');
+      photos.push(imgList[12] + ' id ="ant" class="animate__animated animate__jello animate__fast"  Onclick="antClick(this)" ');
     }
     // Re-arranging Photos For Game Start
     shuffleList(photos);
@@ -110,19 +110,19 @@ const gShuffle = () => {
     shuffleList(photos);
     // Adding Game Photo to Game Board
     photos.forEach(function(photo) {
-      const gPhoto = photo + 'id="wrong" onClick="wrongAnt()" ' + ' />';
+      const gPhoto = photo + 'id="wrong" class="animate__animated animate__jello animate__fast" onClick="wrongAnt()" ' + ' />';
       gBoard.appendChild(document.createElement('div')).innerHTML = gPhoto;
     });
   }else {
     // Selecting the first 14 From numList
     numList.forEach (function(item){
       if (photos.length < 14) {
-        photos.push('<div id="wrong" onClick="wrongAnt()"><br/>' + item + '</div>');
+        photos.push('<div id="wrong" onClick="wrongAnt()" class="animate__animated animate__jello animate__fast"><br/>' + item + '</div>');
       }
     });
     // Picking Only One Number as Answer from numList and Adding it 4 times to photos List
     while (photos.length < 15) {
-      photos.push('<div id ="ant" Onclick="antClick(this)"><br/>' + numList[14] + '</div>');
+      photos.push('<div id ="ant" Onclick="antClick(this)" class="animate__animated animate__jello animate__fast"><br/>' + numList[14] + '</div>');
     }
     // Re-arranging Photos For Game Start
     shuffleList(photos);
@@ -140,7 +140,8 @@ const gShuffle = () => {
 // Game Timer Function
 var systemPoints = 10;
 var levelPoint = 0;
-var timeUp = 1000;
+var timeUp = 2000;
+var userPass = systemPoints - 1;
 const gEngine = () => {
   var  gTym = gameCounter;
   var gTimer = 
@@ -152,18 +153,17 @@ const gEngine = () => {
       confuse.play();
       gEnd();
     }
-    if (gTym == 0 && levelPoint >= 4 ){
+    if (gTym == 0 && levelPoint >= 3 ){
       chai.play();
     }
     userCoins;
     systemPoints;
     if (userCoins >= systemPoints){ // If User Completes Goal
       clearInterval(gTimer);
-      systemPoints += 3;
+      systemPoints += 1;
       levelPoint += 1;
       glevel.innerText = "Level: " + level;
       userCoins = 0;
-      userScore += 10;
       contiNue.play();
       gBoardScore.innerHTML = "Score: " + userScore;
       gBoardCounter.innerText = 0;
@@ -171,14 +171,12 @@ const gEngine = () => {
     }
     levelPoint;
     if (levelPoint == 5) {
-      systemPoints = 10;
       clapping.play();
       level += 1;
       glevel.innerText = "Lv " + level;
       levelPoint = 0;
-      gamePlay.innerHTML = "<h2> Find this image" + systemPoints + " coins </h2> <br/>" + imgList[12] + "/>";
+      gamePlay.innerHTML = "<h2> Find this image</h2> <br/>" + imgList[12] + "/>";
       goal.innerText = "G-" + systemPoints;
-      timeUp -= 10;
       apostle.play();
     }
   }, timeUp);
@@ -217,8 +215,9 @@ const wrongAnt = () => {
 const antClick = (pic) => {
   pic.parentNode.remove();
   userCoins += 1;
-  userScore += 2;
+  userScore += 1;
   gBoardScore.innerHTML = "Score: " + userScore;
+  goal.innerText = "G-" + userPass;
   reshuffleMe += 1;
   if (gamePick == gameList[1]) {
     if (reshuffleMe >= 4){
