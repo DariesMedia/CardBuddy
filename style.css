@@ -237,9 +237,6 @@ li {
 
 @media (min-width: 991.98px) and (max-width: 1200px) {
   .gameHeader li {
-    font-size: 1.5vh;
-  }
-  main {
-    width: 50%;
+    font-size: 10vh;
   }
 }
