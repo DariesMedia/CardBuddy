@@ -183,7 +183,7 @@ const gEngine = () => {
       document.getElementById("body").style.backgroundImage = "url('img/congrats.gif')";
       document.getElementById("body").style.backgroundPosition = "center";
       document.getElementById("body").style.backgroundSize = "cover";
-      document.getElementById("body").style.opacity = "0.6";
+      document.getElementById("body").style.opacity = "0.8";
     }
   }, timeUp);
 }
@@ -243,6 +243,7 @@ const antClick = (pic) => {
 // Function For Play Button
 const play = () => {
   document.getElementById("body").style.backgroundImage = "none";
+  document.getElementById("body").style.opacity = "1";
   playButton.style.display = "none";
   gamePlay.style.display = "none";
   dashboard.style.paddingTop = "5vh";
