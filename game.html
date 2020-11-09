@@ -5,12 +5,15 @@
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>CardBoard</title>
+  <title>Card Buddy</title>
   <!-- HTML -->
   
   <!-- Custom Styles -->
   <link rel="stylesheet" href="style.css">
-
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
 </head>
 
 <body>
@@ -19,7 +22,7 @@
   <header class="game">
     <nav>
       <ul class="gameHeader">
-        <li class=""> CardBoard </li>
+        <li class=""> <a href="index.html"> Home </a></li>
         <li class="level" id="level"> Lv 1</li>
         <li class="counter" id="counter"> 0 </li>
         <li class="score" id="score"> Score: 0</li>
@@ -34,7 +37,7 @@
     <div id="gameBox">
       <div class="g-board" id="g-board"></div>
     
-      <div id="gamePlay"></div>
+      <div id="gamePlay" class="animate__animated animate__bounce animate__slower"></div>
     </div>
    
     <!-- Option Dashboard Interface -->
