@@ -85,7 +85,7 @@ var userCoins = 0;
 var level = 1;
 var reshuffleMe = 0;
 // Select Which Board (Images or Numbers)
-var gamePick = gameList[1];
+var gamePick = gameList[0];
 
 // Game Function
 const gShuffle = () => { 
@@ -271,7 +271,7 @@ const newLevel = () => {
   gamePlay.style.display = "block";
   gamePlay.style.paddingRight = "0vh";
   // Select Which Board (Images or Numbers)
-  if(level > 10){
+  if(level > 4){
     gamePick = gameList[Math.floor(Math.random() * gameList.length)];
   }else {
     gamePick = gameList[1];
