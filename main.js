@@ -85,7 +85,7 @@ var userCoins = 0;
 var level = 1;
 var reshuffleMe = 0;
 // Select Which Board (Images or Numbers)
-var gamePick = gameList[Math.floor(Math.random() * gameList.length)];
+var gamePick = gameList[1];
 
 // Game Function
 const gShuffle = () => { 
@@ -271,7 +271,11 @@ const newLevel = () => {
   gamePlay.style.display = "block";
   gamePlay.style.paddingRight = "0vh";
   // Select Which Board (Images or Numbers)
-  gamePick = gameList[Math.floor(Math.random() * gameList.length)];
+  if(level > 10){
+    gamePick = gameList[Math.floor(Math.random() * gameList.length)];
+  }else {
+    gamePick = gameList[1];
+  }
   if (gamePick == gameList[1]) {
     shuffleList(imgList);
     gamePlay.innerHTML = "<h2 id='congrat'> Congrats! Level " + level + "</h2><br/>" + "<h2> Find this image</h2> <br/>" + imgList[12] + "/>";
