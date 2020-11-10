@@ -85,7 +85,7 @@ var userCoins = 0;
 var level = 1;
 var reshuffleMe = 0;
 // Select Which Board (Images or Numbers)
-var gamePick = gameList[0];
+var gamePick = gameList[1];
 
 // Game Function
 const gShuffle = () => { 
