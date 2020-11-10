@@ -13,16 +13,6 @@ html, body {
   overflow: hidden;
 }
 
-header {
- height: 8vh;
- width: 100vw;
-}
-
-main {
-  height: 92vh;
-  width: 100vw;
-}
-
 .indexBody {
   color: white;
 }
@@ -46,7 +36,7 @@ ul {
 
 .homepage {
   background-color: orangered;
-  font-style: bolder;
+  font-weight: bolder;
 }
 
 li {
@@ -127,7 +117,7 @@ li {
   padding-left: 0vh;
   padding-right: 6vh;
   width: 80vw;
-  height: 40vh;
+  height: 45vh;
   font-size: 2.5vh;
   color: yellow;
 }
@@ -174,8 +164,8 @@ li {
   
 .g-board div {
   background: grey;
-  width: auto;
-  height: 11vh;
+  height: 11vh; 
+  width: 20vw;
   border: 0.5vh solid orange;
 }
 
@@ -205,7 +195,7 @@ li {
 #yes {
   background-color: green;
   color: white;
-  font-size: bolder;
+  font-weight: bolder;
   padding-top: 2vh;
   padding-bottom: 2vh;
   padding-left: 8vh;
@@ -223,7 +213,7 @@ li {
 #no {
   background-color: red;
   color: white;
-  font-size: bolder;
+  font-weight: bolder;
   padding-top: 2vh;
   padding-bottom: 2vh;
   padding-left: 8vh;
@@ -235,6 +225,41 @@ li {
   outline: none;
 }
 
-@media (min-width: 991.98px) and (max-width: 1200px) {
+@media (min-width: 1199.98px) { 
+  li {
+    padding: 2.5vh;
+    padding-left: 6vh;
+    padding-right: 6vh;
+    padding-bottom: 1vh;
+    margin-left: 0vh;
+  }
+
+  #gImage{
+    height: 10vh;
+  }
   
+  .gameHeader li {
+    font-size: 2vh;
+    font-weight: bold;
+  }
+  
+  #gamePlay {
+    width: 30vw;
+    height: 45vh;
+  }
+  
+  .g-board {
+    display: grid;
+    grid-template-columns: 12% 12% 12%;
+    grid-row-gap: 2vh;
+    grid-column-gap: 5vh;
+  }
+
+  .g-board div {
+    width: 12vw
+  }
+  
+  .g-board div > div {
+    width: 12vw;
+  }
 }
