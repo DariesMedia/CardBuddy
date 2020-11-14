@@ -3,7 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes"/>
+  <meta name="full-screen" content="yes"/>
+  <meta name="screen-orientation" content="portrait"/>
   <link rel='icon' href='img/favicon.ico' type='image/x-icon'/ >
 
   <title>Card Buddy</title>
@@ -27,8 +30,8 @@
         <li class="level" id="level"> Lv 1</li>
         <li class="counter" id="counter"> 0 </li>
         <li class="score" id="score"> Score: 0</li>
-        <li id="goal" class="goal"></li>
-        <li class="gImage" id="gImage">Hint:</li>
+        <li id="goal" class="goal animate__animated animate__heartBeat animate__infinite animate__slower"></li>
+        <li class="gImage animate__animated animate__headShake animate__infinite animate__slower" id="gImage">Hint:</li>
       </ul>
     </nav>
   </header>
@@ -36,16 +39,16 @@
   <main>
     <!--Game Board -->
     <div id="gameBox">
-      <div class="g-board" id="g-board"></div>
+      <div class="g-board animate__animated animate__zoomIn animate__slow" id="g-board"></div>
     
       <div id="gamePlay" class="animate__animated animate__bounce animate__slower"></div>
     </div>
    
     <!-- Option Dashboard Interface -->
     <div class="dashboard" id="dashboard">
-      <div id="play" onClick= "play(this)">Start</div>
-      <div id="shuffle" onClick= "shuffleSound()">Shuffle</div>
-      <div id="sound" onClick="offButton()">Music On</div>
+      <div class="animate__animated animate__heartBeat animate__infinite animate__slower" id="play" onClick= "play(this)">Start</div>
+      <div class="animate__animated animate__heartBeat animate__infinite animate__slower" id="shuffle" onClick= "shuffleSound()">Shuffle</div>
+      <div class="animate__animated animate__heartBeat animate__infinite animate__slower" id="sound" onClick="offButton()">Music On</div>
     </div>
     
       
@@ -73,7 +76,12 @@
     
     <audio id="correct" src="./sounds/correct.mp3" preload="auto"></audio>
     
+    <audio id="laugh" src="./sounds/Laugh.mp3" preload="auto"></audio>
+    
+    <audio id="fart" src="./sounds/Fart (Short).mp3" preload="auto"></audio>
+    
     <!-- Script -->
+    <script src="https://connect.facebook.net/en_US/fbinstant.6.3.js"></script>
     <script src="main.js"></script>
   </main>
 </body>
