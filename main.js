@@ -41,6 +41,8 @@ const ayele = document.getElementById("ayele");
 const clapping = document.getElementById("clapping");
 const chai = document.getElementById("chai");
 const correct = document.getElementById("correct");
+const laugh = document.getElementById("laugh");
+const fart = document.getElementById("fart");
 
 // Game Images In a List
 const imgList = [m1,m2, m3, m5, m6, m7, m8, m9, m10, m11, m12, m13, m14, m15, m16, m17, m18, m19, m20, m21, m22, m23, m24];
@@ -116,7 +118,7 @@ const gShuffle = () => {
   }else {
     // Selecting the first 14 From numList
     numList.forEach (function(item){
-      if (photos.length < 14) {
+      if (photos.length < 11) {
         photos.push('<div id="wrong" onClick="wrongAnt()" class="animate__animated animate__jello animate__fast"><br/>' + item + '</div>');
       }
     });
@@ -140,7 +142,7 @@ const gShuffle = () => {
 // Game Timer Function
 var systemPoints = 10;
 var levelPoint = 0;
-var timeUp = 2000;
+var timeUp = 500;
 var userPass = systemPoints;
 const gEngine = () => {
   var  gTym = gameCounter;
@@ -174,6 +176,7 @@ const gEngine = () => {
     if (levelPoint == 5) {
       clapping.play();
       level += 1;
+      timeUp += 300;
       glevel.innerText = "Lv " + level;
       levelPoint = 0;
       goal.innerText = "G-" + systemPoints;
@@ -213,7 +216,11 @@ const shuffleSound = () => {
 
 // Function For Wrong Attempt
 const wrongAnt = () => {
+  fart.play();
   funke.play();
+  if (userScore > 0){
+    userScore -= 1;
+  }
   gBoardScore.innerHTML = "Score: " + userScore;
 }
 
@@ -232,7 +239,7 @@ const antClick = (pic) => {
       reshuffleMe = 0;
     }
   }else {
-    if (reshuffleMe >= 1){
+    if (reshuffleMe >= 4){
       shuffleSound();
       reshuffleMe = 0;
     }
@@ -318,6 +325,7 @@ const gEnd = () => {
   keepQuiet.play();
   instrumental.pause();
   instrumental.currentTime = 0;
+  laugh.play();
 }
 
 
