@@ -142,7 +142,7 @@ const gShuffle = () => {
 // Game Timer Function
 var systemPoints = 10;
 var levelPoint = 0;
-var timeUp = 500;
+var timeUp = 400;
 var userPass = systemPoints;
 const gEngine = () => {
   var  gTym = gameCounter;
