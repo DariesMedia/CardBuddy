@@ -8,16 +8,26 @@
   <meta name="full-screen" content="yes"/>
   <meta name="screen-orientation" content="portrait"/>
   <link rel='icon' href='img/favicon.ico' type='image/x-icon'/ >
-
-  <title>Card Buddy</title>
-  <!-- HTML -->
+  
+  <!-- Primary Meta Tags -->
+  <title>Card Buddy - A Fun Game Filled With Humor</title>
+  <meta name="title" content="Card Buddy - A Fun Game Filled With Humor">
+  <meta name="description" content="Card Buddy is an entertainment fun game with humour. Find and click on a random image/number within a certain time frame to pass stages/levels.">
   
   <!-- Custom Styles -->
   <link rel="stylesheet" href="style.css">
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  <link rel="stylesheet" href="animate.css"
   />
+  
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BXR44BD24J"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-BXR44BD24J');
+  </script>
 </head>
 
 <body id="body">
@@ -27,11 +37,11 @@
     <nav>
       <ul class="gameHeader">
         <li class=""> <a href="index.html"> Home </a></li>
-        <li class="level" id="level"> Lv 1</li>
+        <li class="level animate heartBeat infinite slower" id="level"> Lv 1</li>
         <li class="counter" id="counter"> 0 </li>
         <li class="score" id="score"> Score: 0</li>
-        <li id="goal" class="goal animate__animated animate__heartBeat animate__infinite animate__slower"></li>
-        <li class="gImage animate__animated animate__headShake animate__infinite animate__slower" id="gImage">Hint:</li>
+        <li id="goal" class="goal animate heartBeat infinite slower"></li>
+        <li class="gImage animate headShake infinite slower" id="gImage">Hint:</li>
       </ul>
     </nav>
   </header>
@@ -39,16 +49,16 @@
   <main>
     <!--Game Board -->
     <div id="gameBox">
-      <div class="g-board animate__animated animate__zoomIn animate__slow" id="g-board"></div>
+      <div class="g-board animate zoomIn slow" id="g-board"></div>
     
-      <div id="gamePlay" class="animate__animated animate__bounce animate__slower"></div>
+      <div id="gamePlay" class="animate bounce slower"></div>
     </div>
    
     <!-- Option Dashboard Interface -->
     <div class="dashboard" id="dashboard">
-      <div class="animate__animated animate__heartBeat animate__infinite animate__slower" id="play" onClick= "play(this)">Start</div>
-      <div class="animate__animated animate__heartBeat animate__infinite animate__slower" id="shuffle" onClick= "shuffleSound()">Shuffle</div>
-      <div class="animate__animated animate__heartBeat animate__infinite animate__slower" id="sound" onClick="offButton()">Music On</div>
+      <div class="animate heartBeat infinite slower" id="play" onClick= "play(this)">Start</div>
+      <div class="animate heartBeat infinite slower" id="shuffle" onClick= "shuffleSound()">Shuffle</div>
+      <div class="animate heartBeat infinite slower" id="sound" onClick="offButton()">Music On</div>
     </div>
     
       
