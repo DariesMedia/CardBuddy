@@ -7,7 +7,7 @@ FBInstant.initializeAsync()
     var interval = setInterval(function(){
     // Informs the SDK of loading progress
       FBInstant.setLoadingProgress(progress);
-      progress += 10;
+      progress += 2;
       if (progress >= 95) {
         clearInterval(interval);
         FBInstant.startGameAsync()
