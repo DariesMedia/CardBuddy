@@ -1,26 +1,3 @@
-// Facebook SDK
-FBInstant.initializeAsync()
-  .then(function() {
-    
-  // Start loading game assets here
-    var progress = 0;
-    var interval = setInterval(function(){
-    // Informs the SDK of loading progress
-      FBInstant.setLoadingProgress(progress);
-      progress += 2;
-      if (progress >= 95) {
-        clearInterval(interval);
-        FBInstant.startGameAsync()
-          .then(function() {
-            console.log("Card Buddy Game Has Started. Have Fun!");
-            var playerName = FBInstant.player.getName();
-            var player = document.getElementById("player");
-            player.innerText = "Hi " + playerName;
-        });
-      }
-    }, 100);
-  });
-  
 // Index.html Script
 var introImage = document.getElementById("introImage");
 var helpGame = document.getElementById("helpGame");
@@ -32,6 +9,7 @@ helpGame.style.color= "white";
 const helpClick = () => {
   introImage.style.display = "none";
   helpGame.style.display = "block";
+  helpGame.innerText = "Find and click on a random image/number within a certain time frame to pass stages/levels. <br/> At the top of the game you will find the "Timer", "G-0" (total clicks to be made) and "Hints" (for assistance/reminder of what to click)."
 }
 // Home Function on index.html
 const cardClick = () => {
