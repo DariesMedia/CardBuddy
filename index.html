@@ -42,7 +42,7 @@
     <div class="intro" id="introImage">
       <img src="img/welcome.gif" alt="" />
     </div>
-    <h3 id="helpGame"> Find and click on a random image/number within a certain time frame to pass stages/levels. <br/> At the top of the game you will find the "Timer", "G-0" (total clicks to be made) and "Hints" (for assistance/reminder of what to click). </h3>
+    <h3 id="helpGame"> </h3>
     <br/>
     <h3 id="player"></h3>
     <h1>Welcome on Board</h1>
@@ -54,7 +54,26 @@
   
   
   
-  <script src="index.js" type="text/javascript" charset="utf-8"></script>
+  <script>
+    // Index.html Script
+    var introImage = document.getElementById("introImage");
+    var helpGame = document.getElementById("helpGame");
+    helpGame.style.display = "none";
+    helpGame.style.padding = "4vh";
+    helpGame.style.paddingTop = "12vh";
+    helpGame.style.color= "white";
+    // Help Function on index.html
+    const helpClick = () => {
+      introImage.style.display = "none";
+      helpGame.innerText = "Find and click on a random image/number within a certain time frame to pass stages/levels. <br/> At the top of the game you will find the "Timer", "G-0" (total clicks to be made) and "Hints" (for assistance/reminder of what to click). ";
+      helpGame.style.display = "block";
+    }
+    // Home Function on index.html
+    const cardClick = () => {
+      introImage.style.display = "block";
+      helpGame.style.display = "none";
+    }
+  </script>
 </body>
 
 </html>
