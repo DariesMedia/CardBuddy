@@ -30,30 +30,7 @@
   </script>
 </head>
 
-<body id="body">
-  <script>
-    window.fbAsyncInit = function() {
-      FB.init({
-        appId: '303403260702412',
-        cookie: true,
-        xfbml: true,
-        version: '{api-version}'
-      });
-  
-      FB.AppEvents.logPageView();
-  
-    };
-  
-    (function(d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) { return; }
-      js = d.createElement(s);
-      js.id = id;
-      js.src = "https://connect.facebook.net/en_US/sdk.js";
-      fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
-  </script>
-  
+<body id="body"> 
   <!-- Game Header -->
   <header class="game">
     <nav>
@@ -113,7 +90,6 @@
     <audio id="fart" src="./sounds/Fart (Short).mp3" preload="auto"></audio>
     
     <!-- Script -->
-    <script src="https://connect.facebook.net/en_US/fbinstant.6.3.js"></script>
     <script src="main.js"></script>
   </main>
 </body>
