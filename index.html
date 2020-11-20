@@ -30,30 +30,7 @@
   </script>
 </head>
 
-<body class="indexBody">
-  <script>
-    window.fbAsyncInit = function() {
-      FB.init({
-        appId: '303403260702412',
-        cookie: true,
-        xfbml: true,
-        version: '{api-version}'
-      });
-  
-      FB.AppEvents.logPageView();
-  
-    };
-  
-    (function(d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) { return; }
-      js = d.createElement(s);
-      js.id = id;
-      js.src = "https://connect.facebook.net/en_US/sdk.js";
-      fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
-  </script>
-  
+<body class="indexBody"> 
   <header class="homepage-header">
     <ul class="homepage">
     <li onclick="cardClick()"> Card Buddy </li>
@@ -65,7 +42,7 @@
     <div class="intro" id="introImage">
       <img src="img/welcome.gif" alt="" />
     </div>
-    <h3 id="helpGame"> Find and click on a random image/number within a certain time frame to pass stages/levels. <br/> At the top of the game you will find the "Timer", "G-0" (total clicks to be made) and "Hints" (for assistance/reminder of what to click).</h3>
+    <h3 id="helpGame"> </h3>
     <br/>
     <h3 id="player"></h3>
     <h1>Welcome on Board</h1>
@@ -77,7 +54,6 @@
   
   
   
-  <script src="https://connect.facebook.net/en_US/fbinstant.6.3.js"></script>
   <script src="index.js" type="text/javascript" charset="utf-8"></script>
 </body>
 
