@@ -9,7 +9,7 @@ helpGame.style.color= "white";
 const helpClick = () => {
   introImage.style.display = "none";
   helpGame.style.display = "block";
-  helpGame.innerText = "Find and click on a random image/number within a certain time frame to pass stages/levels. <br/> At the top of the game you will find the "Timer", "G-0" (total clicks to be made) and "Hints" (for assistance/reminder of what to click)."
+  helpGame.innerText = "Find and click on a random image/number within a certain time frame to pass stages/levels. <br/> At the top of the game you will find the "Timer", "G-0" (total clicks to be made) and "Hints" (for assistance/reminder of what to click).";
 }
 // Home Function on index.html
 const cardClick = () => {
