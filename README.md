@@ -1,4 +1,4 @@
-### https://dariesmedia.github.io/CardBuddy/
+### https://dariesmedia.github.io/fingarush/
 
 ## Welcome to GitHub Pages
 
