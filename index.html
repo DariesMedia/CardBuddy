@@ -11,10 +11,14 @@
   <link rel='icon' href='img/favicon.ico' type='image/x-icon'/ >
     
     <!-- Primary Meta Tags -->
-  <title>Card Buddy - A Fun Game Filled With Humor</title>
-  <meta name="title" content="Card Buddy - A Fun Game Filled With Humor">
-  <meta name="description" content="Card Buddy is an entertainment fun game with humour. Find and click on a random image/number within a certain time frame to pass stages/levels.">
-        
+  <title>Fingarush | An Entertaining Fun Game</title>
+  <meta name="title" content="Fingarush | An Entertaining Fun Game">
+  <meta name="description" content="It's fun, easy to play and entertaining to brighten your day. Ready to have fun? Play online for free and experience real fun.">
+  <meta name="keywords" content="party games,kids games,games,family games,funny games,game,fun games,fun game,team games,party game,fun kids games,diy games,fun game ideas,quick games,simple game  s,party games for kids,team building games,team game,christmas party games,kids party games,one minute games,cool games,minute to win it games,birthday party games,fun game night,games for kids,outdoor games,fun ab game,family game ideas,game.,funny horror game games,pe game,diy party games,eating game,the game,kid game,fingarush">
+  <meta name="robots" content="index, follow">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="language" content="English">
+
   <link rel="stylesheet" href="animate.css"
   />
   <link rel="stylesheet" href="style.css" type="text/css" media="all" />
@@ -33,16 +37,16 @@
 <body class="indexBody"> 
   <header class="homepage-header">
     <ul class="homepage">
-    <li onclick="cardClick()"> Card Buddy </li>
+    <li onclick="cardClick()"> Fingarush </li>
     <li onclick="helpClick()"> Help </li>
     </ul>
   </header>
   
   <div class="display animate slideInUp fast">
     <div class="intro" id="introImage">
-      <img src="img/welcome.gif" alt="" />
+      <img src="img/Fingarush.gif" alt="" />
     </div>
-    <h3 id="helpGame"> </h3>
+    <h5 id="helpGame"> </h5>
     <br/>
     <h3 id="player"></h3>
     <h1>Welcome on Board</h1>
@@ -60,12 +64,12 @@
     var helpGame = document.getElementById("helpGame");
     helpGame.style.display = "none";
     helpGame.style.padding = "4vh";
-    helpGame.style.paddingTop = "12vh";
+    helpGame.style.paddingTop = "4vh";
     helpGame.style.color= "white";
     // Help Function on index.html
     const helpClick = () => {
       introImage.style.display = "none";
-      helpGame.innerHTML = 'Find and click on a random image/number within a certain time frame to pass stages/levels. <br/> At the top of the game you will find the "Timer", "G-0" (total clicks to be made) and "Hints" (for assistance/reminder of what to click).';
+      helpGame.innerHTML = "Fingarush is a game designed and developed my <a href='https://www.dariesmedia.com/'>Daries Media</a>. It's a unique game that test the player's problem solving skill through image/numbers recognition with time limits and unlimited attempts. <br/> At the top of the game you will find the 'Timer', 'G-0' (total clicks to be made) and 'Hints' (for assistance/reminder of what to click).";
       helpGame.style.display = "block";
     }
     // Home Function on index.html
