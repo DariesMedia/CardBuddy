@@ -19,6 +19,7 @@ html, body {
 
 a {
   text-decoration: none;
+  color:yellow;
 }
 
 img {
@@ -45,7 +46,7 @@ li {
 }
 
 .gameHeader li {
-  font-size: 1vh;
+  font-size: 2vh;
   font-weight: bolder;
 }
 
