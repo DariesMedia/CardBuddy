@@ -40,7 +40,6 @@ const keepQuiet = document.getElementById("keepQuiet");
 const ayele = document.getElementById("ayele");
 const clapping = document.getElementById("clapping");
 const chai = document.getElementById("chai");
-const correct = document.getElementById("correct");
 const laugh = document.getElementById("laugh");
 const fart = document.getElementById("fart");
 
@@ -244,7 +243,6 @@ const antClick = (pic) => {
       reshuffleMe = 0;
     }
   }
-  correct.play();
 }
 
 // Function For Play Button
